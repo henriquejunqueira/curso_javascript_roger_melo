@@ -226,7 +226,7 @@ const allEpisodes = `O nº de episódios é: ${episodes}`;
 */
 
 const name = 'walter white';
-let newName = name;
+// let newName = name;
 
 // console.log(
 //   newName[0].toUpperCase() +
@@ -235,6 +235,16 @@ let newName = name;
 //     newName[7].toUpperCase() +
 //     newName.slice(8)
 // );
+
+// * Correção (outra forma de resolver o exercício)
+let newName =
+  name[0].toUpperCase() +
+  name.slice(1, 6) +
+  ' ' +
+  name[7].toUpperCase() +
+  name.slice(8);
+
+// console.log(newName);
 
 /*
 22 - Comente o console.log acima, e,
@@ -246,9 +256,17 @@ let newName = name;
 - Exiba a "newName" no console;
 */
 
-console.log(
-  `${newName[0].toUpperCase()}${newName.slice(
-    1,
-    7
-  )} ${newName[7].toUpperCase()}${newName.slice(8)}`
-);
+// console.log(
+//   `${newName[0].toUpperCase()}${newName.slice(
+//     1,
+//     7
+//   )} ${newName[7].toUpperCase()}${newName.slice(8)}`
+// );
+
+// * Correção (outra forma de resolver o exercício)
+newName = `${name[0].toUpperCase()}${name.slice(
+  1,
+  6
+)} ${name[7].toUpperCase()}${name.slice(8)}`;
+
+console.log(newName);
