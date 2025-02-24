@@ -97,6 +97,10 @@ dogNames.pop();
 
 // console.log(dogNames);
 
+// * Correção do exercício
+
+// console.log(dogNames[dogNames.length - 1]);
+
 /*
 09 - Comente o console.log acima e:
 
@@ -111,11 +115,19 @@ apenas as letras iniciais dos nomes do array "dogNames";
 
 dogNames.push('Nina');
 
-const initials =
-  dogNames[0].slice(0, 1) +
-  dogNames[1].slice(0, 1) +
-  dogNames[2].slice(0, 1) +
-  dogNames[3].slice(0, 1);
+// const initials =
+//   dogNames[0].slice(0, 1) +
+//   dogNames[1].slice(0, 1) +
+//   dogNames[2].slice(0, 1) +
+//   dogNames[3].slice(0, 1);
+
+// console.log(initials);
+
+// * Correção do exercício (outra forma de resolver)
+
+dogNames.push('Nina');
+
+const initials = `${dogNames[0][0]}${dogNames[1][0]}${dogNames[2][0]}${dogNames[3][0]}`;
 
 // console.log(initials);
 
@@ -144,10 +156,20 @@ constante que você criou.
 'A SOBREMESA é um doce à base de coco, tradicional na América Latina e em Angola.'
 */
 
-const dessert =
-  dogNames[0].slice(3, 5) +
-  dogNames[1].slice(2) +
-  dogNames[3].slice(2).replace('n', 'd');
+// const dessert =
+//   dogNames[0].slice(3, 5) +
+//   dogNames[1].slice(2) +
+//   dogNames[3].slice(2).replace('n', 'd');
+
+// console.log(
+//   `A ${dessert} é um doce à base de coco, tradicional na América Latina e em Angola.`
+// );
+
+// * Correção do exercício (outra forma de resolver)
+
+const dessert = `${dogNames[0].slice(3)}${dogNames[1].slice(2)}${dogNames[3]
+  .slice(2)
+  .replace('n', 'd')}`;
 
 // console.log(
 //   `A ${dessert} é um doce à base de coco, tradicional na América Latina e em Angola.`
