@@ -67,7 +67,8 @@ const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais'];
 let upperCaseCities = [];
 
 for (let i = 0; i < cities.length; i++) {
-  upperCaseCities[i] = cities[i].toUpperCase();
+  // upperCaseCities[i] = cities[i].toUpperCase();
+  upperCaseCities.push(cities[i].toUpperCase());
 }
 
 // console.log(upperCaseCities);
@@ -82,10 +83,12 @@ for (let i = 0; i < cities.length; i++) {
 */
 
 const names = ['João Grilo', 'Chicó', 'Rosinha'];
-let HTMLTemplate;
+let HTMLTemplate = '';
 
 for (let i = 0; i < names.length; i++) {
-  HTMLTemplate = `<li>${names}</li>`.replaceAll(',', '</li><li>');
+  // HTMLTemplate = `<li>${names}</li>`.replaceAll(',', '</li><li>');
+  // HTMLTemplate = HTMLTemplate + `<li>${names[i]}</li>`;
+  HTMLTemplate += `<li>${names[i]}</li>`;
 }
 
 // console.log(HTMLTemplate);
@@ -103,7 +106,8 @@ const numbers = ['91', '5', '30', '97', '83', '31'];
 let soma = 0;
 
 for (let i = 0; i < numbers.length; i++) {
-  soma += parseInt(numbers[i]);
+  // soma += parseInt(numbers[i]);
+  soma += Number(numbers[i]);
 }
 
 // console.log(soma === 337);
@@ -136,7 +140,7 @@ const arrays = [
 let somaArray = 0;
 
 for (let i = 0; i < arrays.length; i++) {
-  for (let j = 0; j < arrays[i][j]; j++) {
+  for (let j = 0; j < arrays[i].length; j++) {
     somaArray += arrays[i][j];
   }
 }
